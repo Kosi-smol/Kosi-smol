@@ -1,0 +1,33 @@
+{
+  "name": "Kosi — авторские сувениры",
+  "short_name": "Kosi",
+  "description": "Kosi — мастерская авторских сувениров: 3D стикеры, брелоки, магниты, именные ручки и подарочные наборы под заказ.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F9F6F0",
+  "theme_color": "#4A1C2A",
+  "lang": "ru",
+
+  "icons": [
+    {
+      "src": "Kosi_icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "Kosi_icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "Kosi_icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}

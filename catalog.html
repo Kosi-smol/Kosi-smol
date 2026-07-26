@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kosi — авторская сувенирная продукция</title>
+<meta name="description" content="Kosi — мастерская авторских сувениров: 3D стикеры, брелоки, магниты, именные ручки и подарочные наборы под заказ.">
+
+<!-- Исправленный фавикон -->
+<link rel="icon" href="Kosi_logo.png">
+
+<!-- PWA / установка как приложение — подробности и куда класть иконки см. в index.html -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#4A1C2A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kosi">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-slot" aria-label="Kosi — на главную">
+      <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+      <span class="logo-slot__text">
+        <span class="logo-slot__name">KOSI</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html" aria-current="page">Товары</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="index.html#order">Оставить заявку</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Полный ассортимент</span>
+      <h1>Товары</h1>
+      
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+ 
+      <div class="catalog-grid">
+
+        <!--
+          Чтобы у товара было несколько фото и в карточке (попапе) можно было листать их как слайды —
+          просто добавьте ещё <img> внутри .product-card__media, например:
+          <div class="product-card__media">
+            <img src="3D_stikers.jpg" alt="3D стикеры Kosi">
+            <img src="3D_stikers_2.jpg" alt="3D стикеры Kosi — вид сбоку">
+            <img src="3D_stikers_3.jpg" alt="3D стикеры Kosi — на брелоке">
+          </div>
+          На плитке каталога всегда показывается только первое фото, а в открытой карточке товара
+          появятся стрелки и точки — можно листать кликом, свайпом или клавишами ← →.
+        -->
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media">
+            <img src="3D_stikers.jpg" alt="3D стикеры Kosi">
+            <img src="3D_stikers2.jpeg" alt="3D стикеры Kosi — вид сбоку">
+            <img src="work_2.jpg" alt="3D стикеры Kosi — вид сбоку">
+            <img src="Work_5.png" alt="3D стикеры Kosi — вид сбоку">
+            <img src="Work_6.png" alt="3D стикеры Kosi — вид сбоку">
+            
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Печать</span>
+            <h3 class="product-card__title">3D стикеры</h3>
+            <p class="product-card__desc">Объёмные наклейки по индивидуальному макету с вашим фото.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>Эпоксидная смола, УФ-печать</span></li>
+              <li><span>Размер</span><span>30*30мм, по моему макету.</span></li>
+              <li><span>Тираж</span><span>от 2 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2–4 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 75 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media">
+            <img src="Brelok_kosi.jpg" alt="Альбом-брелок Kosi">
+            <img src="work_4.jpeg" alt="Альбом-брелок Kosi">
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Фотопродукция</span>
+            <h3 class="product-card__title">Альбом-брелок</h3>
+            <p class="product-card__desc">Мини-альбом с фотографиями в формате брелока.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>Пластик, алюминий.</span></li>
+              <li><span>Формат</span><span>мини-альбом, 28 фото</span></li>
+              <li><span>Тираж</span><span>от 1 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2–4 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 380 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media"><img src="Kosi_pen.jpg" alt="Именные ручки Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Печать</span>
+            <h3 class="product-card__title">Именные ручки</h3>
+            <p class="product-card__desc">Ручки с персональной печатью имени или логотипа.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>Пластик</span></li>
+              <li><span>Печать</span><span>имя, логотип</span></li>
+              <li><span>Тираж</span><span>от 2 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2–4 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 85 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media"><img src="Kosi_chocolate.jpg" alt="Клиентский шоколад Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Брендинг</span>
+            <h3 class="product-card__title">Клиентский шоколад</h3>
+            <p class="product-card__desc">Шоколад с брендированной упаковкой для клиентов и партнёров.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>шоколад, брендированная упаковка</span></li>
+              <li><span>Вес</span><span>5г</span></li>
+              <li><span>Тираж</span><span>от 10 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2-7 дней</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 20 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media"><img src="Magnit_max.jpg" alt="Магнит с подставкой Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Декор</span>
+            <h3 class="product-card__title">Магнит с подставкой</h3>
+            <p class="product-card__desc">Магнит, дополненный настольной подставкой.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>акрил/дерево</span></li>
+              <li><span>Размер</span><span>по вашему макету</span></li>
+              <li><span>Тираж</span><span>от 1 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2–4 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 120 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media">
+            <img src="Magnit.jpg" alt="Магнит Kosi">
+            <img src="work_3.jpg" alt="Магнит Kosi">
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Печать</span>
+            <h3 class="product-card__title">Магнит</h3>
+            <p class="product-card__desc">Классический магнит с индивидуальным дизайном и фото.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>акрил, магнитный винил</span></li>
+              <li><span>Размер</span><span>по макету с ваши фото</span></li>
+              <li><span>Тираж</span><span>от 1 шт.</span></li>
+              <li><span>Срок изготовления</span><span>1–3 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 95 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media"><img src="Kylon_kosi.jpg" alt="Кулон Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Украшения</span>
+            <h3 class="product-card__title">Кулон</h3>
+            <p class="product-card__desc">Кулон с фотографией.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>металл/эпоксидная смола</span></li>
+              <li><spam>фото</span><span>по желанию</span></li>
+              <li><span>Тираж</span><span>от 1 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2–4 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 249 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media"><img src="cub_photo.jpg" alt="Куб с фотографиями Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Фотопродукция</span>
+            <h3 class="product-card__title">Куб с фотографиями</h3>
+            <p class="product-card__desc">Акриловый куб с несколькими вашими снимками.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>акрил, пластик, крутящий элемент.</span></li>
+              <li><span>Кол-во фото</span><span>до 6</span></li>
+              <li><span>Тираж</span><span>от 1 шт.</span></li>
+              <li><span>Срок изготовления</span><span>2–5 дней</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 750 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card--linkable" data-open-lightbox tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="product-card__media"><img src="Brelok.jpg" alt="Брелок Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Аксессуары</span>
+            <h3 class="product-card__title">Брелок</h3>
+            <p class="product-card__desc">Именной брелок под ваш заказ с ваши фото.</p>
+            <ul class="product-card__specs" hidden>
+              <li><span>Материал</span><span>акрил/металл</span></li>
+              <li><span>Фото</span><span>имя, дата, логотип</span></li>
+              <li><span>Количество</span><span>2 фотографий</span></li>
+              <li><span>Тираж</span><span>от 1 шт.</span></li>
+              <li><span>Срок изготовления</span><span>1–3 дня</span></li>
+            </ul>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 75 ₽</span>
+              <span class="product-card__link">Смотреть</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft reveal">
+    <div class="container" style="text-align:center;">
+      <span class="eyebrow" style="justify-content:center;display:flex;">Не нашли нужную позицию</span>
+      <h2 class="section-title" style="margin:.5em auto;">Оставьте заявку — обсудим индивидуальный заказ</h2>
+      <a href="index.html#order" class="btn btn--primary" style="margin-top:20px;">Оставить заявку</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Модальное окно карточки товара -->
+<div class="lightbox" data-lightbox aria-hidden="true">
+  <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Карточка товара">
+    <div class="lightbox-media" data-lightbox-media>
+      <div class="lightbox-track" data-lightbox-track></div>
+      <button type="button" class="lightbox-arrow lightbox-arrow--prev" data-lightbox-prev aria-label="Предыдущее фото">‹</button>
+      <button type="button" class="lightbox-arrow lightbox-arrow--next" data-lightbox-next aria-label="Следующее фото">›</button>
+      <div class="lightbox-dots" data-lightbox-dots></div>
+    </div>
+    <div class="lightbox-body">
+      <button class="lightbox-close" data-lightbox-close aria-label="Закрыть">×</button>
+      <span class="product-card__eyebrow" data-lightbox-eyebrow></span>
+      <h3 data-lightbox-title></h3>
+
+      <div class="lightbox-tabs" role="tablist" aria-label="Информация о товаре">
+        <button type="button" class="lightbox-tab is-active" data-lightbox-tab="desc" role="tab" aria-selected="true">Описание</button>
+        <button type="button" class="lightbox-tab" data-lightbox-tab="specs" role="tab" aria-selected="false">Характеристики</button>
+      </div>
+
+      <p class="lightbox-tabpanel is-active" data-lightbox-panel="desc" data-lightbox-desc></p>
+      <ul class="lightbox-tabpanel lightbox-specs" data-lightbox-panel="specs" data-lightbox-specs></ul>
+
+      <div class="product-card__foot">
+        <span class="product-card__price" data-lightbox-price></span>
+        <a href="index.html#order" class="product-card__link">Оставить заявку</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-slot">
+        <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+        <span class="logo-slot__text">
+          <span class="logo-slot__name">KOSI</span>
+        </span>
+      </div>
+      <p>Авторские сувениры ручной работы: от идеи до готового изделия. Работаем с 2023 года.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Товары</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="index.html#order">Заявка на заказ</a></li>
+      </ul>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+79963462168">+7 (996) 346-21-68</a></li>
+        <li><a href="mailto:Kosi-smol@yandex.ru">Kosi-smol@yandex.ru</a></li>
+        <li>г. Смоленск</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2023–2026 Kosi. Все права защищены.</span>
+
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

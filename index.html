@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kosi</title>
+<meta name="description" content="Kosi — мастерская авторских сувениров: 3D стикеры, брелоки, магниты, именные ручки и подарочные наборы под заказ.">
+
+<!-- Исправленный фавикон -->
+<link rel="icon" href="Kosi_logo.png">
+
+<!-- ==================== PWA / УСТАНОВКА КАК ПРИЛОЖЕНИЕ ====================
+     Чтобы сайт можно было "установить" на телефон или компьютер
+     (ярлык на рабочем столе / экране Домой, как отдельное приложение),
+     нужно добавить 3 файла с иконкой в папку сайта (рядом с index.html):
+
+       Kosi_icon.jpg            — 192×192 px
+       Kosi_icon.jpg            — 512×512 px
+       Kosi_icon.jpg   — 512×512 px, логотип с запасом полей
+                                  по краям (для Android — обрезается в круг)
+
+     Просто положите свои картинки с ЭТИМИ ИМЕНАМИ в папку сайта —
+     ничего больше менять не нужно, всё подключено ниже и в manifest.json.
+     Название приложения ("Kosi") уже прописано в manifest.json —
+     при необходимости поменяйте его там.
+==========================================================================-->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="Kosi_icon.jpg">
+<meta name="theme-color" content="#4A1C2A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kosi">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== ХЕДЕР ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-slot" aria-label="Kosi — на главную">
+      <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+      <span class="logo-slot__text">
+        <span class="logo-slot__name">KOSI</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="catalog.html">Товары</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="#order">Оставить заявку</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Мастерская авторских сувениров</span>
+        <h1>Сувениры, которые запоминают событие так же хорошо, как и вы</h1>
+        <p class="lede">Изготавливаем именные и корпоративные сувениры на заказ — от 3D‑стикеров и брелоков до фотокубов и брендированного шоколада. Каждое изделие собирается вручную, по вашему макету.</p>
+
+        <div class="hero-actions">
+          <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
+          <a href="#order" class="btn btn--ghost">Оставить заявку</a>
+        </div>
+      </div>
+
+      <div class="hero-emblem">
+        <div class="hero-emblem__ring" aria-hidden="true"></div>
+        <div class="hero-emblem__ring hero-emblem__ring--inner" aria-hidden="true"></div>
+        <div class="logo-slot--hero">
+          <strong><img src="Kosi_logo.png" alt="Kosi"></strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== СЛАЙДЕР РАБОТ ==================== -->
+  <section class="section section--soft reveal">
+    <div class="container works-layout">
+      <div class="works-copy">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Готовые работы</span>
+            <h2 class="section-title">Из последних заказов</h2>
+          </div>
+        </div>
+        <p>Каждое изделие мы собираем вручную и небольшими партиями — от согласования макета до финальной упаковки. На фото справа — реальные примеры работ, выполненных для наших клиентов за последнее время.</p>
+        <p>Хотите такой же подарок или что-то своё по индивидуальному макету? Оставьте заявку — обсудим детали и сроки.</p>
+        <a href="#order" class="btn btn--ghost" style="margin-top:8px;">Оставить заявку</a>
+      </div>
+
+      <!-- Фото последних работ: замените src на свои изображения -->
+      <div class="works-visual">
+        <div class="works-slider" data-works-slider>
+          <div class="works-track-wrap">
+            <div class="works-track">
+              <div class="works-slide">
+                <div class="works-slide__frame"><img src="work_2.jpg" alt="Пример готовой работы Kosi"></div>
+              </div>
+              <div class="works-slide">
+                <div class="works-slide__frame"><img src="work_1.jpg" alt="Пример готовой работы Kosi"></div>
+              </div>
+              <div class="works-slide">
+                <div class="works-slide__frame"><img src="work_3.jpg" alt="Пример готовой работы Kosi"></div>
+              </div>
+              <div class="works-slide">
+                <div class="works-slide__frame"><img src="work_4.jpeg" alt="Пример готовой работы Kosi"></div>
+              </div>
+              <div class="works-slide">
+                <div class="works-slide__frame"><img src="Work_5.png" alt="Пример готовой работы Kosi"></div>
+              </div>
+              <div class="works-slide">
+                <div class="works-slide__frame"><img src="Work_6.png" alt="Пример готовой работы Kosi"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="works-controls">
+            <button class="works-arrow" data-works-prev aria-label="Предыдущее фото">‹</button>
+            <div class="works-dots" role="tablist" aria-label="Выбор фото"></div>
+            <button class="works-arrow" data-works-next aria-label="Следующее фото">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== О БИЗНЕСЕ ==================== -->
+  <section class="section reveal">
+    <div class="container about-grid">
+      <div class="about-mark">
+        <span class="about-mark__year">2023</span>
+        <span class="about-mark__dot" aria-hidden="true"></span>
+        <span class="about-mark__line" aria-hidden="true"></span>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">О мастерской</span>
+        <h2 class="section-title" style="margin-bottom:.6em;">Бизнес с 2023 года</h2>
+        <p><strong>Kosi</strong> — небольшая мастерская, где сувениры делают вручную и небольшими партиями. Мы работаем с частными заказами — подарки к свадьбе, дню рождения, выпускному — и с компаниями, которым нужна брендированная продукция для клиентов и партнёров.</p>
+        <p>Ценим аккуратность на каждом этапе: от подбора материалов и печати до финальной сборки и упаковки. Согласовываем макет до запуска в производство, поэтому результат всегда соответствует ожиданиям.</p>
+        <p>Сроки, материалы и минимальный тираж обсуждаем индивидуально под каждый заказ — напишите нам, и мы подберём решение.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--ТОВАРЫ (ТИЗЕР)-->
+  <section class="section section--soft reveal">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Каталог</span>
+          <h2 class="section-title">Популярные позиции</h2>
+        </div>
+        
+      </div>
+
+      <!-- Карточки товаров: замените src на фото товаров, описание и цену впишите в разметке -->
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-card__media"><img src="3D_stikers.jpg" alt="3D стикеры Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Печать</span>
+            <h3 class="product-card__title">3D стикеры</h3>
+            <p class="product-card__desc">Объёмные наклейки по индивидуальному макету — впишите описание.</p>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 75 ₽</span>
+              <a href="catalog.html" class="product-card__link">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__media"><img src="cub_photo.jpg" alt="Куб с фотографиями Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Фотопродукция</span>
+            <h3 class="product-card__title">Куб с фотографиями</h3>
+            <p class="product-card__desc">Акриловый куб с вашими снимками — впишите описание.</p>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 750 ₽</span>
+              <a href="catalog.html" class="product-card__link">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__media"><img src="Kosi_chocolate.jpg" alt="Клиентский шоколад Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Брендинг</span>
+            <h3 class="product-card__title">Клиентский шоколад</h3>
+            <p class="product-card__desc">Шоколад с брендированной упаковкой — впишите описание.</p>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 20 ₽</span>
+              <a href="catalog.html" class="product-card__link">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__media"><img src="Brelok.jpg" alt="Брелок Kosi"></div>
+          <div class="product-card__body">
+            <span class="product-card__eyebrow">Аксессуары</span>
+            <h3 class="product-card__title">Брелок</h3>
+            <p class="product-card__desc">Именной брелок под ваш заказ — впишите описание.</p>
+            <div class="product-card__foot">
+              <span class="product-card__price">от 75 ₽</span>
+              <a href="catalog.html" class="product-card__link">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="products-more">
+        <a href="catalog.html" class="btn btn--ghost">Весь каталог — 9 позиций</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ЗАЯВКА НА ЗАКАЗ ==================== -->
+  <section class="section order reveal" id="order">
+    <div class="container order-grid">
+      <div class="order-intro">
+        <span class="eyebrow" style="color:var(--rose);">Заявка на заказ</span>
+        <h2 class="section-title">Расскажите, что нужно изготовить</h2>
+        <p>Заполните форму — уточним детали в выбранном мессенджере и пришлём расчёт стоимости и сроков.</p>
+        <ul class="order-intro__list">
+          <li>Отвечаем в течение рабочего дня</li>
+          <li>Уточним детали, макет и сроки в переписке</li>
+          <li>Согласуем макет перед печатью</li>
+        </ul>
+      </div>
+
+      <!--
+        ФОРМА ЗАЯВКИ — отправка на почту через Formspree.
+        Форма подключена (ID: manrgydo). Заявки приходят на почту Kosi-smol@yandex.ru.
+      -->
+      <form class="order-form" data-order-form action="https://formspree.io/f/manrgydo" method="POST">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="Имя" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="Телефон" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="telegram">Telegram</label>
+            <input type="text" id="telegram" name="Telegram" placeholder="@username">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="product">Интересующий товар</label>
+          <select id="product" name="Товар" required>
+            <option value="" disabled selected>Выберите товар</option>
+            <option>3D стикеры</option>
+            <option>Альбом-брелок</option>
+            <option>Именные ручки</option>
+            <option>Клиентский шоколад</option>
+            <option>Магнит с подставкой</option>
+            <option>Магнит</option>
+            <option>Кулон</option>
+            <option>Куб с фотографиями</option>
+            <option>Брелок</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Отправить заявку</button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <p class="form-note">Нажимая «Отправить заявку», вы соглашаетесь на обработку указанных данных.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-slot">
+        <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+        <span class="logo-slot__text">
+          <span class="logo-slot__name">KOSI</span>
+        </span>
+      </div>
+      <p>Авторские сувениры ручной работы: от идеи до готового изделия. Работаем с 2023 года.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Товары</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="#order">Заявка на заказ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+79963462168">+7 (996) 346-21-68</a></li>
+        <li><a href="mailto:Kosi-smol@yandex.ru">Kosi-smol@yandex.ru</a></li>
+        <li>г. Смоленск</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2023–2026 Kosi. Все права защищены.</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

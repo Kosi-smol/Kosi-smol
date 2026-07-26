@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kosi — авторская сувенирная продукция</title>
+<meta name="description" content="Kosi — мастерская авторских сувениров: 3D стикеры, брелоки, магниты, именные ручки и подарочные наборы под заказ.">
+
+<!-- Исправленный фавикон -->
+<link rel="icon" href="Kosi_logo.png">
+
+<!-- PWA / установка как приложение — подробности и куда класть иконки см. в index.html -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#4A1C2A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kosi">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-slot" aria-label="Kosi — на главную">
+      <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+      <span class="logo-slot__text">
+        <span class="logo-slot__name">KOSI</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Товары</a>
+      <a href="contacts.html" aria-current="page">Контакты</a>
+      <a href="#order">Оставить заявку</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">О владельце</span>
+      <h1>Контакты</h1>
+      <p>Немного о том, кто стоит за Kosi, и все способы с нами связаться.</p>
+    </div>
+  </section>
+
+  <!-- ==================== О ВЛАДЕЛЬЦЕ ==================== -->
+  <section class="section reveal">
+    <div class="container owner-grid">
+      <!-- Фото владельца -->
+      <div class="owner-photo owner-photo--filled"><img src="Arsyukov_Daniil.jpg" alt="Арсюков Даниил Витальевич"></div>
+
+      <div class="owner-bio">
+        <span class="owner-role">О владельце</span>
+        <!-- Поле ФИО — впишите имя здесь через код -->
+        <h2 class="owner-name">Арсюков Даниил Витальевич</h2>
+
+        <div class="owner-bio__text" data-bio-text>
+          <p>Арсюков Даниил — предприниматель, основатель бренда Kosi, специализирующегося на создании персонализированных сувениров с фотопечатью под заказ.</p>
+          <p>Обладая профильным IT-образованием и опытом веб-разработки, Даниил с самого начала строил бизнес на стыке технологий и креатива. В 2023 году он запустил собственное дело, решив предложить рынку не просто сувенирную продукцию, а эмоциональные, индивидуальные подарки — от 3D стикеров и магнитов до Альбом-брелоков и брелков с изображениями клиентов.</p>
+          <p>Технический бэкграунд помогает Даниилу выстраивать эффективные процессы: он лично разработал систему приёма заказов, автоматизировал обработку изображений и интегрировал онлайн-оплату, чтобы клиенты получали готовые изделия максимально быстро и без лишних хлопот. За короткий срок Kosi зарекомендовал себя как надёжный сервис, где качество печати и внимание к деталям стоят на первом месте.</p>
+        </div>
+        <button type="button" class="owner-bio__toggle" data-bio-toggle aria-expanded="false">
+          <span data-bio-toggle-label>Читать полностью</span><span class="arrow" aria-hidden="true">▾</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section section--soft reveal">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Как связаться</span>
+          <h2 class="section-title">Контакты компании</h2>
+        </div>
+      </div>
+
+      <div class="contact-details">
+        <div class="contact-card">
+          <h4>Адрес</h4>
+          <!-- Адрес — впишите через код -->
+          <p>Город Смоленск</p>
+        </div>
+        <div class="contact-card">
+          <h4>Телефон</h4>
+          <a href="tel:+79963462168">+7 (996) 346-21-68</a>
+        </div>
+        <div class="contact-card">
+          <h4>Почта</h4>
+          <a href="mailto:Kosi-smol@yandex.ru">Kosi-smol@yandex.ru</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ЗАЯВКА НА ЗАКАЗ ==================== -->
+  <section class="section order reveal" id="order">
+    <div class="container order-grid">
+      <div class="order-intro">
+        <span class="eyebrow" style="color:var(--rose);">Заявка на заказ</span>
+        <h2 class="section-title">Напишите нам напрямую</h2>
+        <p>Заполните форму — ответим в выбранном мессенджере и пришлём расчёт стоимости и сроков.</p>
+        <ul class="order-intro__list">
+          <li>Отвечаем в течение рабочего дня</li>
+          <li>Уточним детали, макет и сроки в переписке</li>
+          <li>Согласуем макет перед печатью</li>
+        </ul>
+      </div>
+
+      <!--
+        ФОРМА ЗАЯВКИ — отправка на почту через Formspree.
+        Форма подключена (ID: manrgydo). Заявки приходят на почту Kosi-smol@yandex.ru.
+      -->
+      <form class="order-form" data-order-form action="https://formspree.io/f/manrgydo" method="POST">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name2">Имя</label>
+            <input type="text" id="name2" name="Имя" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="phone2">Телефон</label>
+            <input type="tel" id="phone2" name="Телефон" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email2">Email</label>
+            <input type="email" id="email2" name="Email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="telegram2">Telegram</label>
+            <input type="text" id="telegram2" name="Telegram" placeholder="@username">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="product2">Интересующий товар</label>
+          <select id="product2" name="Товар" required>
+            <option value="" disabled selected>Выберите товар</option>
+            <option>3D стикеры</option>
+            <option>Альбом-брелок</option>
+            <option>Именные ручки</option>
+            <option>Клиентский шоколад</option>
+            <option>Магнит с подставкой</option>
+            <option>Магнит</option>
+            <option>Кулон</option>
+            <option>Куб с фотографиями</option>
+            <option>Брелок</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Отправить заявку</button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <p class="form-note">Нажимая «Отправить заявку», вы соглашаетесь на обработку указанных данных.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-slot">
+        <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+        <span class="logo-slot__text">
+          <span class="logo-slot__name">KOSI</span>
+        </span>
+      </div>
+      <p>Авторские сувениры ручной работы: от идеи до готового изделия. Работаем с 2023 года.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Товары</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="#order">Заявка на заказ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+79963462168">+7 (996) 346-21-68</a></li>
+        <li><a href="mailto:Kosi-smol@yandex.ru">Kosi-smol@yandex.ru</a></li>
+        <li>г. Смоленск</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2023–2026 Kosi. Все права защищены.</span>
+    
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
