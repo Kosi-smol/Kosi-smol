@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kosi — новости и посты</title>
+  <meta name="description" content="Kosi — новости мастерской: новые работы, акции и анонсы.">
+
+  <!-- Исправленный фавикон -->
+  <link rel="icon" href="Kosi_logo.png">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="Kosi_icon.jpg">
+  <meta name="theme-color" content="#4A1C2A">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kosi">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-slot" aria-label="Kosi — на главную">
+        <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+        <span class="logo-slot__text">
+          <span class="logo-slot__name">KOSI</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Товары</a>
+        <a href="posts.html" aria-current="page">Новости</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="#order">Оставить заявку</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Что нового</span>
+        <h1>Новости</h1>
+        <p>Новые работы, анонсы и всё, чем хочется поделиться.</p>
+      </div>
+    </section>
+
+    <!-- ==================== ПОСТЫ ====================
+       Как добавить пост:
+
+       1) Скопируйте один блок <article class="post-card">...</article> целиком
+          (вместе с открывающим и закрывающим тегом) и вставьте его ПЕРЕД
+          самым первым постом в списке — так новые посты будут сверху.
+
+       2) Внутри блока <div class="post-slider-track"> находятся слайды поста —
+          каждый слайд это отдельный <div class="post-slide">...</div>.
+          Можно добавлять сколько угодно слайдов подряд, фото и видео можно
+          смешивать в одном посте. Стрелки и точки для переключения появятся
+          автоматически, если слайдов больше одного — если слайд один, их
+          скрывать не нужно, это произойдёт само.
+
+            Слайд с фото:
+              <div class="post-slide"><img src="имя-файла.jpg" alt=""></div>
+
+            Слайд с видео (файл .mp4, положите его в папку сайта рядом
+            с картинками; poster — необязательная превью-картинка,
+            которая показывается до нажатия play):
+              <div class="post-slide">
+                <video src="имя-файла.mp4" controls playsinline preload="metadata" poster="превью.jpg"></video>
+              </div>
+
+       3) В <time datetime="ГГГГ-ММ-ДД"> впишите дату в формате ГГГГ-ММ-ДД,
+          а видимый текст даты (между > и </time>) — в удобном для чтения виде.
+
+       4) Текст поста впишите внутри <p class="post-card__text">.
+       ================================================= -->
+    <section class="section reveal">
+      <div class="container">
+
+        <div class="posts-grid">
+
+          <!-- ===== ПОСТ (пример с несколькими фото) ===== -->
+          <article class="post-card">
+            <div class="post-card__media" data-post-slider>
+              <div class="post-slider-track">
+                <div class="post-slide"><img src="photo_001.jpg" alt="Фото к посту"></div>
+                <div class="post-slide"><img src="photo_002.jpg" alt="Фото к посту"></div>
+                <div class="post-slide"><img src="photo_003.jpg" alt="Фото к посту"></div>
+              </div>
+              <button type="button" class="post-slider-arrow post-slider-arrow--prev" data-post-prev
+                aria-label="Предыдущий слайд">‹</button>
+              <button type="button" class="post-slider-arrow post-slider-arrow--next" data-post-next
+                aria-label="Следующий слайд">›</button>
+              <div class="post-slider-dots" data-post-dots></div>
+            </div>
+            <div class="post-card__body">
+              <time class="post-card__date" datetime="2026-07-28">21 июля 2026</time>
+              <p class="post-card__text">
+                <strong>Лопатинский сад — это любовь! ❤️</strong><br><br>
+                Рад, что погода не подвела 21 июля, и вы пришли гулять к нам на ярмарку. Стенд Kosi был самым стильным
+                (ну, по крайней мере, мне так кажется 😉).<br><br>
+                Особый хит дня — это шоколад с видом Смоленска и наши новые 3D стикеры.<br><br>
+                Спасибо за покупки, за ваши "ого" и за то, что выбрали нас именно в этот летний день. Брелоки и магниты
+                ждут вас всегда, а пока — доделываем запасы шоколада, потому что его раскупили почти под ноль!<br><br>
+                До новых встреч на ярмарках, друзья! Ваш Kosi. Можете посмотреть видео  ✌️<br>
+                <span style="color: #007bff;">#21июля #Kosi #ЛопатинскийСад</span>
+              </p>
+            </div>
+          </article>
+
+          
+          <article class="post-card">
+            <div class="post-card__media" data-post-slider>
+              <div class="post-slider-track">
+                <div class="post-slide">
+                  <video src="Video_001.MOV" controls playsinline preload="metadata" poster="Photo_001.jpg"></video>
+                </div>
+              </div>
+              <button type="button" class="post-slider-arrow post-slider-arrow--prev" data-post-prev
+                aria-label="Предыдущий слайд">‹</button>
+              <button type="button" class="post-slider-arrow post-slider-arrow--next" data-post-next
+                aria-label="Следующий слайд">›</button>
+              <div class="post-slider-dots" data-post-dots></div>
+            </div>
+            <div class="post-card__body">
+              <time class="post-card__date" datetime="2026-07-22">21 июля 2026</time>
+              <p class="post-card__text">Видео с ярмарки<br><br><span style="color: #007bff;">#21июля #Kosi #ЛопатинскийСад</span></p>
+            </div>
+          </article>
+
+          <!-- ===== ПОСТ (пример с одним фото) ===== 
+          <article class="post-card">
+            <div class="post-card__media" data-post-slider>
+              <div class="post-slider-track">
+                <div class="post-slide"><img src="Work_5.png" alt="Фото к посту"></div>
+              </div>
+              <button type="button" class="post-slider-arrow post-slider-arrow--prev" data-post-prev
+                aria-label="Предыдущий слайд">‹</button>
+              <button type="button" class="post-slider-arrow post-slider-arrow--next" data-post-next
+                aria-label="Следующий слайд">›</button>
+              <div class="post-slider-dots" data-post-dots></div>
+            </div>
+            <div class="post-card__body">
+              <time class="post-card__date" datetime="2026-07-15">15 июля 2026</time>
+              <p class="post-card__text">Ещё один пример поста — с одним фото. Замените фото, дату и этот текст на свои.
+                Стрелки в такой карточке скрываются автоматически, так как слайд всего один.</p>
+            </div>
+          </article>-->
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ЗАЯВКА НА ЗАКАЗ ==================== -->
+    <section class="section order reveal" id="order">
+      <div class="container order-grid">
+        <div class="order-intro">
+          <span class="eyebrow" style="color:var(--rose);">Заявка на заказ</span>
+          <h2 class="section-title">Напишите нам напрямую</h2>
+          <p>Заполните форму — ответим в выбранном мессенджере и пришлём расчёт стоимости и сроков.</p>
+          <ul class="order-intro__list">
+            <li>Отвечаем в течение рабочего дня</li>
+            <li>Уточним детали, макет и сроки в переписке</li>
+            <li>Согласуем макет перед печатью</li>
+          </ul>
+        </div>
+
+        <!--
+        ФОРМА ЗАЯВКИ — отправка на почту через Formspree.
+        Форма подключена (ID: manrgydo). Заявки приходят на почту Kosi-smol@yandex.ru.
+      -->
+        <form class="order-form" data-order-form action="https://formspree.io/f/manrgydo" method="POST">
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name3">Имя</label>
+              <input type="text" id="name3" name="Имя" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="phone3">Телефон</label>
+              <input type="tel" id="phone3" name="Телефон" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email3">Email</label>
+              <input type="email" id="email3" name="Email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="telegram3">Telegram</label>
+              <input type="text" id="telegram3" name="Telegram" placeholder="@username">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="product3">Интересующий товар</label>
+            <select id="product3" name="Товар" required>
+              <option value="" disabled selected>Выберите товар</option>
+              <option>3D стикеры</option>
+              <option>Альбом-брелок</option>
+              <option>Именные ручки</option>
+              <option>Клиентский шоколад</option>
+              <option>Магнит с подставкой</option>
+              <option>Магнит</option>
+              <option>Кулон</option>
+              <option>Куб с фотографиями</option>
+              <option>Брелок</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Отправить заявку</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          <p class="form-note">Нажимая «Отправить заявку», вы соглашаетесь на обработку указанных данных.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo-slot">
+          <span class="logo-slot__mark"><img src="Kosi_logo.png" alt=""></span>
+          <span class="logo-slot__text">
+            <span class="logo-slot__name">KOSI</span>
+          </span>
+        </div>
+        <p>Авторские сувениры ручной работы: от идеи до готового изделия. Работаем с 2023 года.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Товары</a></li>
+          <li><a href="posts.html">Новости</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#order">Заявка на заказ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79963462168">+7 (996) 346-21-68</a></li>
+          <li><a href="mailto:Kosi-smol@yandex.ru">Kosi-smol@yandex.ru</a></li>
+          <li>г. Смоленск</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2023–2026 Kosi. Все права защищены.</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
