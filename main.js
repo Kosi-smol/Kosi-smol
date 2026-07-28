@@ -324,7 +324,87 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
+  /* ---------- Слайдеры фото/видео в постах ---------- */
+  document.querySelectorAll('[data-post-slider]').forEach(media => {
+    const track = media.querySelector('.post-slider-track');
+    const slides = Array.from(media.querySelectorAll('.post-slide'));
+    const prevBtn = media.querySelector('[data-post-prev]');
+    const nextBtn = media.querySelector('[data-post-next]');
+    const dotsWrap = media.querySelector('[data-post-dots]');
+
+    if (!track || slides.length <= 1) {
+      media.classList.add('is-single');
+      return;
+    }
+
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Показать слайд ${i + 1}`);
+      if (i === 0) dot.setAttribute('aria-current', 'true');
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => {
+        if (i === index) d.setAttribute('aria-current', 'true');
+        else d.removeAttribute('aria-current');
+      });
+      /* Ставим на паузу видео на неактивных слайдах */
+      slides.forEach((slide, i) => {
+        const video = slide.querySelector('video');
+        if (video && i !== index) video.pause();
+      });
+    }
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      render();
+    }
+
+    prevBtn && prevBtn.addEventListener('click', () => goTo(index - 1));
+    nextBtn && nextBtn.addEventListener('click', () => goTo(index + 1));
+
+    /* Свайп/перетаскивание пальцем или мышью */
+    let dragStartX = null;
+    let dragDeltaX = 0;
+    let dragging = false;
+
+    function dragStart(x) {
+      dragging = true;
+      dragStartX = x;
+      dragDeltaX = 0;
+      track.style.transition = 'none';
+    }
+    function dragMove(x) {
+      if (!dragging) return;
+      dragDeltaX = x - dragStartX;
+      const percent = (dragDeltaX / track.clientWidth) * 100;
+      track.style.transform = `translateX(calc(-${index * 100}% + ${percent}%))`;
+    }
+    function dragEnd() {
+      if (!dragging) return;
+      dragging = false;
+      track.style.transition = '';
+      const threshold = track.clientWidth * 0.15;
+      if (dragDeltaX > threshold) goTo(index - 1);
+      else if (dragDeltaX < -threshold) goTo(index + 1);
+      else render();
+    }
+
+    track.addEventListener('touchstart', (e) => dragStart(e.touches[0].clientX), { passive: true });
+    track.addEventListener('touchmove', (e) => dragMove(e.touches[0].clientX), { passive: true });
+    track.addEventListener('touchend', dragEnd);
+    track.addEventListener('mousedown', (e) => { e.preventDefault(); dragStart(e.clientX); });
+    window.addEventListener('mousemove', (e) => dragMove(e.clientX));
+    window.addEventListener('mouseup', dragEnd);
+
+    render();
+  });
 
 });
 
